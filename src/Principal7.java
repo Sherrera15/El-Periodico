@@ -132,6 +132,8 @@ public class Principal7 extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("JasmineUPC", 2, 24)); // NOI18N
         jLabel8.setText("Valor Total A Pagar");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, -1, -1));
+
+        txtValorTotal.setEditable(false);
         getContentPane().add(txtValorTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 110, -1));
 
         pack();
@@ -143,8 +145,8 @@ public class Principal7 extends javax.swing.JFrame {
 
     private void cmbCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbCalcularActionPerformed
         // TODO add your handling code here:
-        String  num1, num2,num3, resul, resul1, resul2, tota;
-        double n1 = 1,n2 = 1,n3 = 1,resultado = 0, npalabras,ntamaños,ncolores, total;
+        String  num1, n2,num3, resul, resul1, resul2, tota;
+        double n1 = 0,num2 = 0,n3 = 0,resultado = 0, npalabras,ntamaños,ncolores, total;
         
         
         
@@ -162,7 +164,7 @@ public class Principal7 extends javax.swing.JFrame {
         
            
         n1= Double.parseDouble(txtNumeroDePalabras.getText());
-        n2= Double.parseDouble(txtTamañoEnCm.getText());
+        num2= Double.parseDouble(txtTamañoEnCm.getText());
         n3 = Double.parseDouble(txtNumeroDeColores.getText());
         
         }
@@ -171,7 +173,7 @@ public class Principal7 extends javax.swing.JFrame {
         resul = String.valueOf(npalabras);
         txtValorPalabras.setText(resul);
         
-        ntamaños = n2*15000;
+        ntamaños = num2*15000;
         resul1= String.valueOf(ntamaños);
         txtValorTamaño.setText(resul1);
         
